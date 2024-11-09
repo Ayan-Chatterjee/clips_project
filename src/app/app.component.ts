@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'clips';
+   title = 'clips';
+
+   // Memory Leak 
+  // showModal = false;
+  // constructor(public modal: ModalService) {}
+  // ngOnInit() {
+  //   setInterval(() =>{
+  //     this.showModal = !this.showModal
+  //     console.log(this.modal.modals)
+  //   }
+  //   ,1000);
+  // }
 }
