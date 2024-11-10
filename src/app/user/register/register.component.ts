@@ -32,11 +32,14 @@ export class RegisterComponent {
   phoneNumber = new FormControl('',
     [
       Validators.required,
-      Validators.minLength(10),
-      Validators.maxLength(10)
+      Validators.minLength(10)
     ]
 
   );
+
+  showAlert = false;
+  alertMsg = 'Please wait!';
+  alertcolor = 'blue'
 
   registerForm = new FormGroup({
     name: this.name,
@@ -46,4 +49,10 @@ export class RegisterComponent {
     confirm_Password: this.confirm_Password,
     phoneNumber: this.phoneNumber,
   });
+
+  register(){
+    this.showAlert = true;
+    this.alertMsg = 'Please wait!';
+    this.alertcolor = 'blue';
+  }
 }
