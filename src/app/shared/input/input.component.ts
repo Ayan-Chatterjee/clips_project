@@ -7,9 +7,10 @@ import { FormControl } from '@angular/forms';
   styleUrl: './input.component.css'
 })
 export class InputComponent {
+  
   @Input() control = new FormControl();
-  ngOnInit() : void{
-    console.log("Control: ",this.control.value);
-  }
+  @Input() type = 'text';
+  @Input() placeholder = '';
+  @Input() format = '';
 
 }
