@@ -5,6 +5,10 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../../environments/environment.development';
+
 
 
 
@@ -18,7 +22,9 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
     CommonModule,
     SharedModule,
     ReactiveFormsModule ,
-    FormsModule 
+    FormsModule ,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   exports: [
     AuthModalComponent
