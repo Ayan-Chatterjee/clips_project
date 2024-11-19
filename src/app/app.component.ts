@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
    title = 'clips';
 
-   // Memory Leak 
-  // showModal = false;
-  // constructor(public modal: ModalService) {}
-  // ngOnInit() {
-  //   setInterval(() =>{
-  //     this.showModal = !this.showModal
-  //     console.log(this.modal.modals)
-  //   }
-  //   ,1000);
-  // }
+   constructor(public auth: AuthService){}
+
+   
 }
